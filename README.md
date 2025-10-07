@@ -1,6 +1,11 @@
-# project-spring-equipe2
-TP DataOps, Projet d’équipe dans le cadre du module Spring / Scrum
+# 🧱 project-spring-equipe2  
+**TP DataOps — Projet d’équipe dans le cadre du module Spring / Scrum**
+
+---
+
 # 🚀 Projet DataPulse - Sprint 1 (DataOps)
+
+---
 
 ## 🧩 Contexte du projet
 
@@ -9,19 +14,20 @@ L’objectif est de concevoir un pipeline complet permettant :
 - L’ingestion de données brutes (CSV ou API),
 - Leur transformation et nettoyage automatisé,
 - Leur stockage dans une base de données structurée,
-- Et leur visualisation via un dashboard simple (tableau ou graphique).
+- Et leur visualisation via un dashboard simple et moderne.
 
-Ce sprint a pour but de simuler un cycle **Scrum complet** appliqué à un projet DataOps.
+Ce sprint a pour but de **simuler un cycle Scrum complet** appliqué à un projet DataOps.
 
 ---
 
 ## 🎯 Objectifs du Sprint 1
 
-- Créer le dépôt GitHub avec gestion des issues et backlog.  
+- Créer le dépôt GitHub et le projet associé (Kanban).  
 - Identifier et décrire les **User Stories (US)** principales.  
 - Détaillez les **tâches techniques** à réaliser.  
-- Estimer la charge de travail avec des **Story Points (Fibonacci)**.  
-- Planifier le sprint et répartir les rôles.
+- Estimer la charge de travail avec des **Story Points (suite de Fibonacci)**.  
+- Planifier le sprint et répartir les rôles Scrum.  
+- Simuler les **événements agiles** (Daily, Review, Retro).  
 
 ---
 
@@ -29,11 +35,11 @@ Ce sprint a pour but de simuler un cycle **Scrum complet** appliqué à un proje
 
 | Rôle | Membre | Responsabilités |
 |------|---------|----------------|
-| **Product Owner** | Arcy | Définit les priorités du backlog, veille à la valeur métier. |
-| **Scrum Master** | Ann-Jireh | Garant de la méthode agile, facilite la communication. |
-| **Data Engineer** | Bryan | Met en place les pipelines et transformations de données. |
-| **Data Analyst** | Mohammed | Analyse les données et conçoit le tableau de bord final. |
-| **DevOps Engineer** | Mhammed | Automatise le déploiement et la supervision des flux. |
+| **Product Owner (PO)** | Arcy | Définit les priorités du backlog, s’assure que le produit répond aux besoins métier. |
+| **Scrum Master (SM)** | Jireh | Facilite la communication, veille au respect de la méthode agile. |
+| **Data Engineer** | Gloire | Développe les pipelines de données et automatise les flux d’ingestion. |
+| **Data Analyst** | Mohammed | Nettoie et analyse les données, conçoit le dashboard de visualisation. |
+| **DevOps Engineer** | Mhammed | Gère la supervision, les logs et la fiabilité des traitements automatisés. |
 
 ---
 
@@ -47,8 +53,8 @@ Ce sprint a pour but de simuler un cycle **Scrum complet** appliqué à un proje
 - 🔍 In Review  
 - ✅ Done  
 
-Chaque **issue** correspond à une **User Story (US)**.  
-Les **tâches techniques** seront listées dans la description de chaque issue.
+Chaque **issue** représente une **User Story (US)**.  
+Les **tâches techniques** sont listées dans la description de chaque issue.
 
 ---
 
@@ -56,11 +62,11 @@ Les **tâches techniques** seront listées dans la description de chaque issue.
 
 | ID | User Story | Description | Critères d’acceptation | Estimation (SP) |
 |----|-------------|--------------|-------------------------|-----------------|
-| **US1** | Ingestion automatisée des données | En tant que Data Engineer, je veux automatiser la récupération de fichiers CSV pour alimenter la base de données. | Le pipeline doit pouvoir lire automatiquement les fichiers d’un dossier et les insérer en base. | 5 |
-| **US2** | Nettoyage et transformation des données | En tant que Data Analyst, je veux transformer les données pour les rendre exploitables (valeurs manquantes, formatage, etc.). | Les données nettoyées doivent être stockées dans une table "clean_data". | 3 |
+| **US1** | Ingestion automatisée des données | En tant que Data Engineer, je veux automatiser la récupération de fichiers CSV pour alimenter la base de données. | Le pipeline doit lire automatiquement les fichiers d’un dossier et les insérer en base. | 5 |
+| **US2** | Nettoyage et transformation des données | En tant que Data Analyst, je veux transformer les données pour les rendre exploitables (valeurs manquantes, formatage, doublons). | Les données nettoyées doivent être stockées dans une table `clean_data`. | 3 |
 | **US3** | Stockage structuré | En tant que DevOps Engineer, je veux stocker les données transformées dans une base PostgreSQL. | Les données doivent être accessibles via SQL. | 3 |
-| **US4** | Visualisation des données | En tant que Data Analyst, je veux afficher les résultats dans un dashboard (via Python/Streamlit). | Le dashboard doit montrer les indicateurs principaux. | 8 |
-| **US5** | Supervision du pipeline | En tant que DevOps Engineer, je veux mettre en place des logs et une supervision des erreurs. | Le système doit notifier en cas d’échec. | 5 |
+| **US4** | Visualisation des données | En tant que Data Analyst, je veux afficher les résultats dans un dashboard (via Streamlit). | Le dashboard doit afficher au moins trois indicateurs principaux. | 8 |
+| **US5** | Supervision du pipeline | En tant que DevOps Engineer, je veux mettre en place des logs et alertes d’erreur. | Le système doit notifier en cas d’échec et conserver un journal d’exécution. | 5 |
 
 ---
 
@@ -68,26 +74,26 @@ Les **tâches techniques** seront listées dans la description de chaque issue.
 
 | User Story | Tâche | Responsable | Estimation (SP) | Livrable attendu |
 |-------------|-------|--------------|------------------|------------------|
-| US1 | Créer le script d’ingestion (Python) | Axel | 3 | Script d’import automatique |
-| US1 | Automatiser via un cron job ou scheduler | Kevin | 2 | Script exécuté toutes les heures |
-| US2 | Créer le script de nettoyage (Pandas) | Sarah | 3 | Données nettoyées |
-| US3 | Concevoir le schéma PostgreSQL | Axel | 3 | Table structurée |
-| US3 | Connecter Python à PostgreSQL | Kevin | 2 | Connexion validée |
-| US4 | Créer un dashboard Streamlit | Sarah | 5 | Tableau de bord visuel |
-| US5 | Ajouter des logs (logging Python) | Kevin | 3 | Fichier de logs |
-| US5 | Mettre en place un rapport d’erreurs (email/console) | Ann-Jireh | 2 | Notification d’alerte |
+| US1 | Créer le script d’ingestion (Python) | Gloire | 3 | Script d’import automatique depuis un dossier CSV |
+| US1 | Automatiser l’exécution via cron job ou scheduler | Mhammed | 2 | Ingestion automatisée |
+| US2 | Créer le script de nettoyage (Pandas) | Mohammed | 3 | Données nettoyées et formatées |
+| US3 | Concevoir le schéma PostgreSQL | Gloire | 3 | Base PostgreSQL fonctionnelle |
+| US3 | Connecter Python à PostgreSQL (SQLAlchemy) | Mhammed | 2 | Connexion validée |
+| US4 | Créer un dashboard Streamlit | Mohammed | 5 | Dashboard affichant les KPIs |
+| US5 | Ajouter un système de logs | Mhammed | 3 | Fichier de logs et console |
+| US5 | Mettre en place une alerte par mail/terminal | Jireh | 2 | Notification d’erreur automatisée |
 
 ---
 
-## 🕐 Estimation des Story Points (suite de Fibonacci)
+## 🧮 Estimation des Story Points (Fibonacci)
 
 | Complexité | Valeur | Description |
 |-------------|--------|-------------|
-| Très simple | 1 | Configuration rapide ou correction mineure |
-| Simple | 2 | Petite fonctionnalité (script, test, doc) |
-| Moyenne | 3 | Script avec dépendances ou API |
+| Très simple | 1 | Configuration, correctif mineur |
+| Simple | 2 | Script ou fonction courte |
+| Moyenne | 3 | Script autonome avec dépendances |
 | Complexe | 5 | Pipeline complet ou dashboard |
-| Très complexe | 8 | Intégration multiple ou automatisation avancée |
+| Très complexe | 8 | Intégration multiple avec dashboard et DB |
 
 ---
 
@@ -95,13 +101,13 @@ Les **tâches techniques** seront listées dans la description de chaque issue.
 
 | Sprint | Durée | Objectifs principaux |
 |--------|--------|----------------------|
-| Sprint 1 | 1 semaine | Mettre en place l’ingestion, le nettoyage et le stockage initial des données. |
+| Sprint 1 | 1 semaine | Mettre en place l’ingestion, le nettoyage et le stockage initial. |
 
-**Livrables attendus :**
-- Scripts fonctionnels (Python)
-- Base PostgreSQL connectée
-- Dashboard Streamlit minimal
-- Documentation du sprint
+### 🎯 Livrables
+- Scripts Python fonctionnels  
+- Base PostgreSQL connectée  
+- Dashboard Streamlit minimal  
+- Documentation complète du sprint  
 
 ---
 
@@ -109,10 +115,10 @@ Les **tâches techniques** seront listées dans la description de chaque issue.
 
 | Événement | Objectif | Durée indicative |
 |------------|-----------|------------------|
-| **Sprint Planning** | Choisir les US réalisables en 1 semaine | 1h |
-| **Daily Scrum** | Suivi quotidien des avancées | 15 min |
-| **Sprint Review** | Présenter les livrables | 30 min |
-| **Sprint Retrospective** | Identifier les améliorations | 30 min |
+| **Sprint Planning** | Définir les US et tâches réalisables du sprint | 1h |
+| **Daily Scrum** | Synchroniser les membres (15 min/jour) | 15 min |
+| **Sprint Review** | Présenter les livrables au PO | 30 min |
+| **Sprint Retrospective** | Identifier les axes d’amélioration | 30 min |
 
 ---
 
@@ -120,20 +126,98 @@ Les **tâches techniques** seront listées dans la description de chaque issue.
 
 | Question | Réponse |
 |-----------|----------|
-| ✅ Ce qui a bien fonctionné | Bonne communication et répartition des rôles clairs. |
-| ⚠️ À améliorer | Estimations parfois sous-évaluées. |
-| 🚀 Pour le prochain sprint | Ajouter des tests unitaires et un monitoring plus détaillé. |
+| ✅ Ce qui a bien fonctionné | Collaboration active et communication claire. |
+| ⚠️ À améliorer | Estimation plus réaliste des tâches techniques. |
+| 🚀 Pour le prochain sprint | Intégrer les tests automatiques et un monitoring avancé. |
 
 ---
 
-## 📚 Documentation complémentaire
-
-- Dossier `/docs` : guide d’installation, architecture technique, scripts Python.
-- Fichier `/scripts` : contient les scripts d’ingestion et transformation.
-- Fichier `/dashboard` : dashboard Streamlit ou Jupyter Notebook.
+# 📘 Documentation Scrum intégrée
 
 ---
 
-## 🏁 Conclusion
+## 🧩 Contexte Scrum
 
-Le sprint 1 permet de poser les bases d’un processus **DataOps automatisé**, garantissant la qualité, la fiabilité et la traçabilité des données à chaque étape du pipeline.
+Le projet **DataPulse** applique la méthode **Scrum** afin d’améliorer la qualité du travail d’équipe et de livrer de la valeur à chaque itération.  
+L’équipe se base sur trois piliers :  
+👉 **Transparence**, **Inspection**, **Adaptation**.
+
+---
+
+## 👥 Rôles Scrum
+
+| Rôle | Membre | Responsabilités principales |
+|------|---------|-----------------------------|
+| **Product Owner (PO)** | Arcy | Priorise le backlog, définit les objectifs du sprint et valide les livrables. |
+| **Scrum Master (SM)** | Jireh | Facilite la méthode Scrum, élimine les obstacles et anime les réunions agiles. |
+| **Développeurs Data** | Gloire, Mohammed, Mhammed | Réalisent les tâches techniques (scripts, pipeline, dashboard, logs). |
+
+---
+
+## 🧱 Artefacts Scrum
+
+### 🧩 Product Backlog  
+Contient toutes les User Stories définissant les fonctionnalités à développer.
+
+### 🗂️ Sprint Backlog  
+Sous-ensemble du Product Backlog sélectionné pour le Sprint 1.
+
+### 🧩 Incrément  
+Résultat livrable à la fin du sprint :  
+- Pipeline fonctionnel  
+- Base PostgreSQL connectée  
+- Dashboard Streamlit  
+- Système de supervision automatisé
+
+---
+
+## 🕒 Événements Scrum
+
+| Événement | Objectif | Durée |
+|------------|-----------|-------|
+| **Sprint Planning** | Définir les objectifs et tâches du sprint | 1h |
+| **Daily Scrum** | Synchroniser l’équipe, suivre les avancements | 15 min/jour |
+| **Sprint Review** | Présenter les résultats au PO et obtenir un feedback | 30 min |
+| **Sprint Retrospective** | Identifier les points à améliorer | 30 min |
+
+---
+
+## 🧮 Estimation (Story Points Fibonacci)
+
+| Valeur | Signification | Exemple |
+|---------|---------------|----------|
+| 1 | Très simple | Script court |
+| 2 | Simple | Fonction d’import ou test |
+| 3 | Moyenne | Script de nettoyage |
+| 5 | Complexe | Pipeline complet |
+| 8 | Très complexe | Dashboard connecté |
+
+---
+
+## 📦 Sprint 1 — Planification détaillée
+
+| User Story | Responsable | Estimation | Livrable attendu |
+|-------------|--------------|-------------|------------------|
+| US1 | Gloire | 5 | Script d’ingestion automatisé |
+| US2 | Mohammed | 3 | Script de nettoyage Pandas |
+| US3 | Mhammed | 3 | Base PostgreSQL connectée |
+| US4 | Mohammed | 8 | Dashboard Streamlit |
+| US5 | Jireh / Mhammed | 5 | Système de logs et alertes |
+
+---
+
+## 📊 Outils utilisés
+
+| Outil | Utilisation |
+|-------|--------------|
+| **GitHub Projects** | Gestion du backlog et suivi Kanban |
+| **Python / Pandas** | Traitement et nettoyage des données |
+| **PostgreSQL** | Stockage structuré |
+| **Streamlit** | Dashboard de visualisation |
+| **Logging Python** | Supervision du pipeline |
+| **Markdown Docs** | Documentation du sprint |
+
+---
+
+## 🔁 Cycle Scrum
+
