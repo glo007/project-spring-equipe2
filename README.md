@@ -29,11 +29,11 @@ Ce sprint a pour but de simuler un cycle **Scrum complet** appliqué à un proje
 
 | Rôle | Membre | Responsabilités |
 |------|---------|----------------|
-| **Product Owner** | Bryan | Définit les priorités du backlog, veille à la valeur métier. |
+| **Product Owner** | Arcy | Définit les priorités du backlog, veille à la valeur métier. |
 | **Scrum Master** | Ann-Jireh | Garant de la méthode agile, facilite la communication. |
-| **Data Engineer** | Axel | Met en place les pipelines et transformations de données. |
-| **Data Analyst** | Sarah | Analyse les données et conçoit le tableau de bord final. |
-| **DevOps Engineer** | Kevin | Automatise le déploiement et la supervision des flux. |
+| **Data Engineer** | Bryan | Met en place les pipelines et transformations de données. |
+| **Data Analyst** | Mohammed | Analyse les données et conçoit le tableau de bord final. |
+| **DevOps Engineer** | Mhammed | Automatise le déploiement et la supervision des flux. |
 
 ---
 
