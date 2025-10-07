@@ -1,8 +1,8 @@
-# 📘 Documentation Scrum - Projet DataPulse (Sprint 1)
+#  Documentation Scrum - Projet DataPulse (Sprint 1)
 
 ---
 
-## 🧩 Contexte général
+##  Contexte général
 
 Le projet **DataPulse** a été réalisé dans le cadre du **TP DataOps – Module Spring/Scrum**.  
 L’objectif est de simuler un **sprint complet Scrum**, autour d’un projet DataOps dont la mission principale est de concevoir un pipeline de données automatisé permettant :
@@ -16,7 +16,7 @@ Ce sprint illustre l’application des **valeurs Scrum** : collaboration, transp
 
 ---
 
-## 👥 Organisation de l’équipe Scrum
+##  Organisation de l’équipe Scrum
 
 | Rôle                    | Membre    | Responsabilités principales                                                                     |
 | ----------------------- | --------- | ----------------------------------------------------------------------------------------------- |
@@ -28,9 +28,9 @@ L’équipe travaille de manière collaborative sur GitHub, en suivant un **Kanb
 
 ---
 
-## 🧱 Artefacts Scrum
+##  Artefacts Scrum
 
-### 📦 1. Product Backlog
+###  1. Product Backlog
 
 Le **Product Backlog** regroupe toutes les fonctionnalités (User Stories) nécessaires à la réalisation du projet.  
 Chaque User Story (US) décrit un besoin utilisateur précis, des critères d’acceptation et des tâches techniques.
@@ -46,7 +46,7 @@ Exemples :
 
 ---
 
-### 📋 2. Sprint Backlog
+### 2. Sprint Backlog
 
 Le **Sprint Backlog** contient les User Stories sélectionnées pour ce sprint d’une semaine.  
 Elles sont réparties dans le **Kanban GitHub** :
@@ -55,7 +55,7 @@ Elles sont réparties dans le **Kanban GitHub** :
 
 ---
 
-### 🧩 3. Incrément
+###  3. Incrément
 
 L’incrément représente le résultat livré à la fin du sprint :
 
@@ -65,7 +65,7 @@ L’incrément représente le résultat livré à la fin du sprint :
 
 ---
 
-## 🕒 Événements Scrum simulés
+##  Événements Scrum simulés
 
 | Événement                | Objectif                                                                   | Durée       | Résultat attendu                        |
 | ------------------------ | -------------------------------------------------------------------------- | ----------- | --------------------------------------- |
@@ -76,7 +76,7 @@ L’incrément représente le résultat livré à la fin du sprint :
 
 ---
 
-## 🧮 Estimation avec Story Points
+##  Estimation avec Story Points
 
 L’équipe a utilisé la **suite de Fibonacci (1, 2, 3, 5, 8)** pour estimer la charge de travail de chaque tâche selon sa complexité.
 
@@ -90,7 +90,7 @@ L’équipe a utilisé la **suite de Fibonacci (1, 2, 3, 5, 8)** pour estimer la
 
 ---
 
-## 🗓️ Planification du Sprint 1
+## Planification du Sprint 1
 
 | User Story                            | Responsable | Estimation | Livrable attendu                  |
 | ------------------------------------- | ----------- | ---------- | --------------------------------- |
@@ -103,7 +103,7 @@ L’équipe a utilisé la **suite de Fibonacci (1, 2, 3, 5, 8)** pour estimer la
 
 ---
 
-## 📊 Outils utilisés
+## Outils utilisés
 
 | Outil                        | Utilisation                               |
 | ---------------------------- | ----------------------------------------- |
@@ -117,23 +117,23 @@ L’équipe a utilisé la **suite de Fibonacci (1, 2, 3, 5, 8)** pour estimer la
 
 ---
 
-## 🔁 Cycle de vie du Sprint
+##  Cycle de vie du Sprint
 
 Chaque itération se conclut par une **version livrable et documentée** du pipeline DataOps.
 
 ---
 
-## 📈 Bilan du Sprint 1
+##  Bilan du Sprint 1
 
 | Question                            | Réponse                                                                  |
 | ----------------------------------- | ------------------------------------------------------------------------ |
-| ✅ Ce qui a bien fonctionné         | Bonne coordination d’équipe et respect des rôles Scrum.                  |
-| ⚠️ Ce qui aurait pu mieux se passer | Gestion du temps sur certaines tâches techniques.                        |
-| 🚀 Ce qu’on va améliorer            | Automatiser davantage et ajouter des tests unitaires pour chaque script. |
+|  Ce qui a bien fonctionné         | Bonne coordination d’équipe et respect des rôles Scrum.                  |
+|  Ce qui aurait pu mieux se passer | Gestion du temps sur certaines tâches techniques.                        |
+|  Ce qu’on va améliorer            | Automatiser davantage et ajouter des tests unitaires pour chaque script. |
 
 ---
 
-## 🎯 Objectif final
+##  Objectif final
 
 À la fin du Sprint 1, l’équipe **DataPulse (Équipe 2)** doit :
 
@@ -143,7 +143,7 @@ Chaque itération se conclut par une **version livrable et documentée** du pipe
 
 ---
 
-## 📚 Références
+##  Références
 
 - [Guide Scrum - Scrum.org](https://www.scrum.org/resources/scrum-guide)
 - [GitHub Projects (Kanban)](https://docs.github.com/fr/issues/planning-and-tracking-with-projects)
