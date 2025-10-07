@@ -1,13 +1,13 @@
-# 🧱 project-spring-equipe2  
+#  project-spring-equipe2  
 **TP DataOps — Projet d’équipe dans le cadre du module Spring / Scrum**
 
 ---
 
-# 🚀 Projet DataPulse - Sprint 1 (DataOps)
+#  Projet DataPulse - Sprint 1 (DataOps)
 
 ---
 
-## 🧩 Contexte du projet
+##  Contexte du projet
 
 Le projet **DataPulse** s’inscrit dans une démarche **DataOps**, visant à automatiser et fiabiliser les flux de données d’une organisation.  
 L’objectif est de concevoir un pipeline complet permettant :
@@ -20,7 +20,7 @@ Ce **Sprint 1** a pour but de **simuler un cycle Scrum complet** appliqué à un
 
 ---
 
-## 🎯 Objectifs du Sprint 1
+##  Objectifs du Sprint 1
 
 - Créer le dépôt GitHub et le projet associé (Kanban).  
 - Identifier et décrire les **User Stories (US)** principales.  
@@ -31,7 +31,7 @@ Ce **Sprint 1** a pour but de **simuler un cycle Scrum complet** appliqué à un
 
 ---
 
-## 👥 Organisation Scrum de l’équipe
+## Organisation Scrum de l’équipe
 
 | Rôle | Membre | Responsabilités |
 |------|---------|----------------|
@@ -41,15 +41,15 @@ Ce **Sprint 1** a pour but de **simuler un cycle Scrum complet** appliqué à un
 
 ---
 
-## 🗂️ Organisation GitHub Project
+##  Organisation GitHub Project
 
 **Nom du projet GitHub :** `Sprint 1 - DataOps`  
 **Type :** Kanban board  
 **Colonnes :**  
-- 📋 To do  
-- ⚙️ In Progress  
-- 🔍 In Review  
-- ✅ Done  
+-  To do  
+-  In Progress  
+-  In Review  
+-  Done  
 
 Chaque **issue** correspond à une **User Story (US)**.  
 Les **tâches techniques** sont listées dans la description de chaque issue.
