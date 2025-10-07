@@ -35,8 +35,8 @@ Ce **Sprint 1** a pour but de **simuler un cycle Scrum complet** appliqué à un
 
 | Rôle | Membre | Responsabilités |
 |------|---------|----------------|
-| **Product Owner (PO)** | Arcy | Définit les priorités du backlog, s’assure que le produit répond aux besoins métier et valide les livrables. |
-| **Scrum Master (SM)** | Ann-Jireh | Facilite la communication, garantit la méthode Scrum et supervise la progression de l’équipe. |
+| **Product Owner (PO)** | Ann-jireh | Définit les priorités du backlog, s’assure que le produit répond aux besoins métier et valide les livrables. |
+| **Scrum Master (SM)** | Arcy | Facilite la communication, garantit la méthode Scrum et supervise la progression de l’équipe. |
 | **Développeur DataOps** | Gloire | Met en place le pipeline de données complet : ingestion, nettoyage, stockage et visualisation. |
 
 ---
@@ -77,8 +77,8 @@ Les **tâches techniques** sont listées dans la description de chaque issue.
 | **US2** | Créer le script de nettoyage (`clean_data.py`) | Gloire | 3 | Données nettoyées dans PostgreSQL |
 | **US3** | Concevoir le schéma PostgreSQL et configurer la connexion | Gloire | 3 | Base `datapulse_db` connectée |
 | **US4** | Créer un dashboard Streamlit (`dashboard.py`) | Gloire | 8 | Dashboard interactif |
-| **US5** | Ajouter un système de logs et d’alertes | Ann-Jireh | 5 | Fichier de logs et notifications |
-| **Scrum** | Maintenir la documentation et le backlog | Arcy | 2 | README et suivi du projet |
+| **US5** | Ajouter un système de logs et d’alertes | Arcy | 5 | Fichier de logs et notifications |
+| **Scrum** | Maintenir la documentation et le backlog | Ann-jireh | 2 | README et suivi du projet |
 
 ---
 
@@ -146,8 +146,8 @@ Scrum repose sur 3 piliers :
 
 | Rôle | Membre | Responsabilités principales |
 |------|---------|-----------------------------|
-| **Product Owner (PO)** | Arcy | Gère le backlog produit, fixe les priorités, valide les livrables. |
-| **Scrum Master (SM)** | Ann-Jireh | Garantit la méthode Scrum, anime les cérémonies et supprime les obstacles. |
+| **Product Owner (PO)** | Ann-jireh | Gère le backlog produit, fixe les priorités, valide les livrables. |
+| **Scrum Master (SM)** | Arcy| Garantit la méthode Scrum, anime les cérémonies et supprime les obstacles. |
 | **Développeur DataOps** | Gloire | Développe, teste et automatise le pipeline complet de données. |
 
 ---
