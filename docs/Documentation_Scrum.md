@@ -20,8 +20,8 @@ Ce sprint illustre l’application des **valeurs Scrum** : collaboration, transp
 
 | Rôle                    | Membre    | Responsabilités principales                                                                     |
 | ----------------------- | --------- | ----------------------------------------------------------------------------------------------- |
-| **Product Owner (PO)**  | Arcy      | Définit les priorités du backlog, veille à la valeur métier et valide les livrables.            |
-| **Scrum Master (SM)**   | Ann-Jireh | Facilite la communication, supprime les obstacles et veille au respect de la méthode Scrum.     |
+| **Product Owner (PO)**  | Ann-Jireh      | Définit les priorités du backlog, veille à la valeur métier et valide les livrables.            |
+| **Scrum Master (SM)**   | Arcy | Facilite la communication, supprime les obstacles et veille au respect de la méthode Scrum.     |
 | **Développeur DataOps** | Gloire    | Met en œuvre les scripts Python, la base PostgreSQL, le dashboard et le système de supervision. |
 
 L’équipe travaille de manière collaborative sur GitHub, en suivant un **Kanban agile** via le projet `Sprint 1 - DataOps`.
@@ -98,8 +98,8 @@ L’équipe a utilisé la **suite de Fibonacci (1, 2, 3, 5, 8)** pour estimer la
 | **US2** - Nettoyage et transformation | Gloire      | 3          | Script `clean_data.py`            |
 | **US3** - Stockage structuré          | Gloire      | 3          | Base PostgreSQL `datapulse_db`    |
 | **US4** - Visualisation               | Gloire      | 8          | Dashboard Streamlit               |
-| **US5** - Supervision                 | Ann-Jireh   | 5          | Système de logs et alertes        |
-| **US6** - Documentation / Backlog     | Arcy        | 3          | README complet et suivi de projet |
+| **US5** - Supervision                 |    Arcy  | 5          | Système de logs et alertes        |
+| **US6** - Documentation / Backlog     |   Ann-Jireh    | 3          | README complet et suivi de projet |
 
 ---
 
