@@ -56,7 +56,7 @@ Les **tâches techniques** sont listées dans la description de chaque issue.
 
 ---
 
-## 📋 Product Backlog — User Stories (US)
+##  Product Backlog — User Stories (US)
 
 | ID | User Story | Description | Critères d’acceptation | Estimation (SP) |
 |----|-------------|--------------|-------------------------|-----------------|
@@ -68,7 +68,7 @@ Les **tâches techniques** sont listées dans la description de chaque issue.
 
 ---
 
-## 🧩 Détail des tâches techniques (Sprint Backlog)
+##  Détail des tâches techniques (Sprint Backlog)
 
 | User Story | Tâches | Responsable | Estimation (SP) | Livrable attendu |
 |-------------|--------|--------------|------------------|------------------|
@@ -82,7 +82,7 @@ Les **tâches techniques** sont listées dans la description de chaque issue.
 
 ---
 
-## 🧮 Estimation des Story Points (Fibonacci)
+##  Estimation des Story Points (Fibonacci)
 
 | Complexité | Valeur | Description |
 |-------------|--------|-------------|
@@ -94,13 +94,13 @@ Les **tâches techniques** sont listées dans la description de chaque issue.
 
 ---
 
-## 🗓️ Planification du Sprint 1
+##  Planification du Sprint 1
 
 | Sprint | Durée | Objectifs principaux |
 |--------|--------|----------------------|
 | **Sprint 1** | 1 semaine | Construire un pipeline de données automatisé (ingestion → nettoyage → stockage → visualisation). |
 
-### 🎯 Livrables attendus
+###  Livrables attendus
 - Scripts Python fonctionnels (`ingestion.py`, `clean_data.py`)  
 - Base PostgreSQL connectée  
 - Dashboard Streamlit affichant les indicateurs  
@@ -108,7 +108,7 @@ Les **tâches techniques** sont listées dans la description de chaque issue.
 
 ---
 
-## 🌀 Événements Scrum simulés
+##  Événements Scrum simulés
 
 | Événement | Objectif | Durée indicative |
 |------------|-----------|------------------|
@@ -119,21 +119,21 @@ Les **tâches techniques** sont listées dans la description de chaque issue.
 
 ---
 
-## 📈 Bilan du Sprint 1
+##  Bilan du Sprint 1
 
 | Question | Réponse |
 |-----------|----------|
-| ✅ Ce qui a bien fonctionné | Collaboration fluide et forte autonomie technique. |
-| ⚠️ À améliorer | Gestion du temps sur certaines tâches techniques. |
-| 🚀 Pour le prochain sprint | Automatiser davantage et ajouter des tests unitaires. |
+|  Ce qui a bien fonctionné | Collaboration fluide et forte autonomie technique. |
+|  À améliorer | Gestion du temps sur certaines tâches techniques. |
+|  Pour le prochain sprint | Automatiser davantage et ajouter des tests unitaires. |
 
 ---
 
-# 📘 Documentation Scrum intégrée
+#  Documentation Scrum intégrée
 
 ---
 
-## 🧠 Principe de la méthode Scrum
+## Principe de la méthode Scrum
 
 Scrum repose sur 3 piliers :
 - **Transparence** : tout le monde voit l’avancement via le Kanban GitHub.  
@@ -142,7 +142,7 @@ Scrum repose sur 3 piliers :
 
 ---
 
-## 👥 Rôles dans l’équipe Scrum
+##  Rôles dans l’équipe Scrum
 
 | Rôle | Membre | Responsabilités principales |
 |------|---------|-----------------------------|
@@ -152,7 +152,7 @@ Scrum repose sur 3 piliers :
 
 ---
 
-## 🧱 Artefacts Scrum
+##  Artefacts Scrum
 
 | Artefact | Description |
 |-----------|-------------|
@@ -162,7 +162,7 @@ Scrum repose sur 3 piliers :
 
 ---
 
-## 🕒 Événements Scrum
+##  Événements Scrum
 
 | Événement | Description | Objectif |
 |------------|-------------|-----------|
@@ -173,7 +173,7 @@ Scrum repose sur 3 piliers :
 
 ---
 
-## 🧮 Estimation avec Story Points (suite de Fibonacci)
+##  Estimation avec Story Points (suite de Fibonacci)
 
 | Valeur | Niveau de complexité | Exemple |
 |---------|----------------------|----------|
@@ -185,7 +185,7 @@ Scrum repose sur 3 piliers :
 
 ---
 
-## 📊 Outils utilisés
+##  Outils utilisés
 
 | Outil | Rôle dans le projet |
 |-------|----------------------|
@@ -198,7 +198,7 @@ Scrum repose sur 3 piliers :
 
 ---
 
-## 📈 Bilan Scrum global
+##  Bilan Scrum global
 
 | Points forts | Axes d’amélioration |
 |---------------|--------------------|
@@ -208,7 +208,7 @@ Scrum repose sur 3 piliers :
 
 ---
 
-## 🎯 Objectif final
+## Objectif final
 
 À la fin du **Sprint 1**, l’équipe DataPulse aura :
 - Un **pipeline automatisé complet** (ingestion → nettoyage → stockage → dashboard),  
@@ -217,14 +217,14 @@ Scrum repose sur 3 piliers :
 
 ---
 
-## 📚 Références
+## Références
 
-- [📖 Guide Scrum (Scrum.org)](https://www.scrum.org/resources/scrum-guide)  
-- [📘 GitHub Projects (Kanban)](https://docs.github.com/fr/issues/planning-and-tracking-with-projects)  
-- [🐍 Python Logging](https://docs.python.org/3/library/logging.html)  
-- [📊 Streamlit Documentation](https://docs.streamlit.io/)
+- [Guide Scrum (Scrum.org)](https://www.scrum.org/resources/scrum-guide)  
+- [ GitHub Projects (Kanban)](https://docs.github.com/fr/issues/planning-and-tracking-with-projects)  
+- [Python Logging](https://docs.python.org/3/library/logging.html)  
+- [Streamlit Documentation](https://docs.streamlit.io/)
 
 ---
 
-> 🧠 *“Inspecter, adapter et livrer de la valeur — même dans la donnée.”*  
+>  *“Inspecter, adapter et livrer de la valeur — même dans la donnée.”*  
 > — Équipe 2 : **Arcy**, **Ann-Jireh**, **Gloire**
