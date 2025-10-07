@@ -1,190 +1,151 @@
-# Documentation Scrum – Projet DataOps : Analyse des performances scolaires des étudiants
+# Documentation Scrum — Projet DataTrack (Sprint 1 - DataOps)
 
 ---
 
 ## 1. Contexte du projet
 
-L’entreprise souhaite suivre les performances scolaires des étudiants à l’aide d’un tableau de bord analytique.  
-Pour cela, l’équipe Data doit concevoir un pipeline DataOps automatisé permettant de télécharger, transformer et analyser les données issues du dataset Kaggle :  
-**Students Performance Dataset**
+Le projet **DataTrack** s’inscrit dans une démarche **DataOps** visant à automatiser le suivi et l’analyse des performances scolaires des étudiants à partir du dataset **Students Performance (Kaggle)**.  
+Ce dataset contient des informations telles que les **scores**, le **genre**, l’**origine ethnique**, le **niveau d’éducation des parents**, et d’autres facteurs.
 
-Ce dataset contient des informations sur :
-- les scores des étudiants,
-- leur genre,
-- leur origine ethnique,
-- le niveau d’éducation des parents,
-- le type de repas pris avant les tests, etc.
+### Objectif principal :
+Mettre en place une organisation Scrum simulée autour d’un **pipeline DataOps complet** permettant :
+- L’extraction des données depuis Kaggle,
+- Le nettoyage et la transformation du dataset,
+- Le stockage structuré dans une base PostgreSQL,
+- La visualisation des résultats dans un tableau de bord Streamlit.
 
-Objectif analytique : Identifier les patterns et les facteurs influençant la réussite scolaire des élèves.
+Ce sprint permet de démontrer la mise en œuvre concrète de la **méthodologie Agile Scrum** appliquée à un projet Data.
 
 ---
 
-## 2. Organisation Scrum
+## 2. Équipe et rôles Scrum
 
 | Rôle | Membre | Responsabilités principales |
 |------|---------|-----------------------------|
-| Product Owner | Gloire | Définit la vision produit, gère le backlog et les priorités |
-| Scrum Master | Arcy | Facilite les rituels Scrum, supervise le bon déroulement du sprint |
-| Data Engineer (support) | Ann-Jireh | Contribue à la documentation et à la vérification du tableau de bord (charge réduite) |
+| **Product Owner (PO)** | **Arcy** | Définit les priorités du backlog, valide les livrables, rédige la documentation et gère la vision produit. |
+| **Scrum Master (SM)** | **Ann-Jireh** | Facilite la méthode Scrum, veille à la communication et anime les réunions (faible charge de travail technique). |
+| **DataOps Engineer / Développeur principal** | **Gloire** | Conçoit et implémente le pipeline complet : extraction, nettoyage, stockage et visualisation. |
+
+**Organisation :**
+- L’équipe travaille en sprint d’une semaine.  
+- Les réunions Scrum sont simulées via des mises à jour sur GitHub (issues, Kanban et backlog).  
+- Le suivi des tâches est effectué à l’aide du **Project Board GitHub**.
 
 ---
 
-## 3. Product Backlog – User Stories
+## 3. Les artefacts Scrum
 
-### US1 – Extraction des données depuis Kaggle
-**En tant que** Data Engineer,  
-**je veux** télécharger automatiquement le dataset *Students Performance* depuis Kaggle,  
-**afin de** disposer des données sources pour le pipeline.
+### 3.1 Product Backlog
+Le **Product Backlog** regroupe l’ensemble des besoins du projet sous forme de **User Stories (US)**.
 
-**Critères d’acceptation :**
-- Le dataset est bien téléchargé depuis Kaggle.
-- Les fichiers sont stockés dans un dossier `/data/raw`.
-- Le fichier CSV est exploitable.
-
-**Estimation :** 3 Story Points  
-**Responsable :** Gloire
-
----
-
-### US2 – Nettoyage et préparation des données
-**En tant que** Analyste Data,  
-**je veux** nettoyer et structurer les données,  
-**afin de** supprimer les valeurs manquantes et garantir la qualité du dataset.
-
-**Critères d’acceptation :**
-- Aucune valeur nulle dans les colonnes critiques.
-- Données cohérentes et typées correctement.
-- Export d’un fichier `cleaned_data.csv`.
-
-**Estimation :** 5 Story Points  
-**Responsable :** Gloire
+| ID | User Story | Description | Responsable | Estimation (SP) |
+|----|-------------|--------------|--------------|-----------------|
+| US1 | Extraction des données depuis Kaggle | Télécharger et sauvegarder le dataset Kaggle pour alimenter le pipeline. | Gloire | 5 |
+| US2 | Nettoyage et préparation du dataset | Nettoyer et transformer les données pour les rendre exploitables. | Gloire | 3 |
+| US3 | Stockage structuré des données | Charger les données nettoyées dans une base PostgreSQL. | Gloire | 3 |
+| US4 | Tableau de bord analytique | Visualiser les données avec Streamlit. | Gloire | 8 |
+| US5 | Supervision du pipeline | Créer un système de logs et suivi des erreurs. | Ann-Jireh | 2 |
+| US6 | Documentation et suivi du sprint | Rédiger la documentation et maintenir le backlog. | Arcy | 3 |
 
 ---
 
-### US3 – Chargement des données dans l’environnement analytique
-**En tant que** Data Engineer,  
-**je veux** simuler le chargement des données dans une base de données,  
-**afin de** permettre l’alimentation du futur tableau de bord.
+### 3.2 Sprint Backlog
 
-**Critères d’acceptation :**
-- Schéma ETL décrit et validé.
-- Étape de chargement documentée dans le pipeline.
-
-**Estimation :** 3 Story Points  
-**Responsable :** Arcy
-
----
-
-### US4 – Création du tableau de bord analytique
-**En tant que** Analyste,  
-**je veux** concevoir un tableau de bord avec des visualisations claires,  
-**afin de** mettre en évidence les corrélations entre les notes, le genre, et le niveau d’éducation parental.
-
-**Critères d’acceptation :**
-- Le dashboard comporte au moins trois graphiques pertinents (ex : histogramme, corrélation, heatmap).
-- L’interprétation des résultats est rédigée.
-- Le rendu final est compréhensible sans code.
-
-**Estimation :** 5 Story Points  
-**Responsable :** Arcy
+| User Story | Tâches principales | Responsable | Estimation (SP) | Livrable attendu |
+|-------------|-------------------|--------------|------------------|------------------|
+| US1 | Télécharger le dataset Kaggle et sauvegarder localement. | Gloire | 5 | Script `extract_kaggle.py` |
+| US2 | Nettoyer les données et supprimer les doublons. | Gloire | 3 | Script `clean_data.py` |
+| US3 | Créer la base PostgreSQL et insérer les données. | Gloire | 3 | Script `load_postgres.py` |
+| US4 | Concevoir le dashboard Streamlit. | Gloire | 8 | Fichier `dashboard.py` |
+| US5 | Mettre en place le système de logs. | Ann-Jireh | 2 | `logging_system.py` |
+| US6 | Rédiger la documentation et le bilan du sprint. | Arcy | 3 | `README.md`, `Documentation_Scrum.md` |
 
 ---
 
-### US5 – Documentation et bilan du sprint
-**En tant que** membre de l’équipe,  
-**je veux** rédiger la documentation du projet et le bilan du sprint,  
-**afin de** assurer la traçabilité du travail et la transparence de l’équipe Scrum.
-
-**Critères d’acceptation :**
-- README.md et documentation_scrum.md complets.
-- Rétrospective du sprint incluse.
-- Livrables finalisés et déposés sur GitHub.
-
-**Estimation :** 2 Story Points  
-**Responsable :** Ann-Jireh
+### 3.3 L’incrément
+L’**incrément** représente le résultat du sprint, c’est-à-dire :
+- Un pipeline DataOps complet simulé,  
+- Une documentation claire et fonctionnelle,  
+- Des User Stories validées par le Product Owner,  
+- Un tableau de bord de suivi de l’équipe sur GitHub (Kanban).  
 
 ---
 
-## 4. Estimation et priorisation (Backlog priorisé)
-
-| ID | User Story | Priorité | Story Points | Responsable |
-|----|-------------|-----------|---------------|--------------|
-| US1 | Extraction du dataset Kaggle | Haute | 3 | Gloire |
-| US2 | Nettoyage et transformation | Très haute | 5 | Gloire |
-| US3 | Chargement simulé | Moyenne | 3 | Arcy |
-| US4 | Dashboard analytique | Très haute | 5 | Arcy |
-| US5 | Documentation finale | Basse | 2 | Ann-Jireh |
-
----
-
-## 5. Sprint Planning (Semaine 1)
-
-**Durée du sprint :** 1 semaine  
-**Objectif du Sprint :** Disposer d’un pipeline complet documenté et d’un dashboard analytique opérationnel.
-
-| Tâche | Description | Responsable | Story Points | Livrable attendu |
-|-------|--------------|--------------|---------------|------------------|
-| T1 | Télécharger le dataset depuis Kaggle | Gloire | 3 | students_performance.csv |
-| T2 | Nettoyer et structurer les données | Gloire | 5 | cleaned_data.csv |
-| T3 | Documenter le pipeline ETL | Arcy | 3 | Schéma ETL |
-| T4 | Créer le tableau de bord (maquette) | Arcy | 5 | Dashboard PDF ou capture |
-| T5 | Rédiger la documentation finale | Ann-Jireh | 2 | documentation_scrum.md complet |
-
----
-
-## 6. Sprint Backlog – Vue synthétique
-
-| Tâche | Statut | Responsable | Points | État |
-|-------|---------|--------------|---------|-------|
-| T1 – Extraction Kaggle | Terminé | Gloire | 3 | Done |
-| T2 – Nettoyage | En cours | Gloire | 5 | In progress |
-| T3 – Chargement simulé | Terminé | Arcy | 3 | Done |
-| T4 – Dashboard | En revue | Arcy | 5 | In review |
-| T5 – Documentation | À faire | Ann-Jireh | 2 | To do |
-
----
-
-## 7. Événements Scrum simulés
+## 4. Les événements Scrum simulés
 
 | Événement | Objectif | Durée | Responsable |
 |------------|-----------|--------|--------------|
-| Sprint Planning | Planifier les tâches et définir le Sprint Goal | 30 min | Arcy |
-| Daily Scrum | Suivi rapide de l’avancement | 10 min/jour | Gloire |
-| Sprint Review | Présenter les résultats du pipeline et du dashboard | 20 min | Arcy |
-| Sprint Retrospective | Identifier les points à améliorer | 15 min | Ann-Jireh |
+| **Sprint Planning** | Identifier les User Stories du sprint et définir les objectifs. | 1 heure | Arcy |
+| **Daily Scrum** | Suivre les avancements (simulé via mise à jour des issues). | 15 minutes | Ann-Jireh |
+| **Sprint Review** | Présenter les livrables à la fin du sprint (scripts, docs, dashboard). | 30 minutes | Arcy |
+| **Sprint Retrospective** | Identifier ce qui a bien fonctionné et ce qui doit être amélioré. | 30 minutes | Ann-Jireh |
 
 ---
 
-## 8. Bilan du Sprint
+## 5. Estimation en Story Points (Suite de Fibonacci)
+
+| Niveau de complexité | Valeur | Description |
+|-----------------------|--------|--------------|
+| Très simple | 1 | Tâche mineure ou ajustement de code |
+| Simple | 2 | Petite fonctionnalité (ex : script court, logs) |
+| Moyenne | 3 | Script standard ou transformation simple |
+| Complexe | 5 | Automatisation de pipeline ou script API |
+| Très complexe | 8 | Intégration complète (dashboard, visualisation) |
+
+---
+
+## 6. Cycle du Sprint
+
+1. **Sprint Planning** → définition des User Stories à réaliser.  
+2. **Daily Scrum** → suivi régulier de l’avancement (via Kanban GitHub).  
+3. **Développement** → réalisation des tâches techniques.  
+4. **Sprint Review** → présentation des livrables et validation.  
+5. **Sprint Retrospective** → bilan du sprint et axes d’amélioration.
+
+### Représentation schématique :
+
+---
+
+## 7. Bilan du Sprint 1
 
 | Question | Réponse |
 |-----------|----------|
-| Ce qui a bien fonctionné | Répartition claire des rôles, bonne communication, respect des délais |
-| Ce qui aurait pu mieux se passer | Estimation initiale des tâches légèrement sous-évaluée |
-| Ce qu’on va améliorer | Documenter les étapes plus tôt et inclure des exemples visuels dans le README |
+| Ce qui a bien fonctionné | Répartition claire des rôles, bon suivi via GitHub Projects. |
+| Ce qui aurait pu mieux se passer | L’extraction Kaggle aurait pu être mieux automatisée. |
+| Améliorations envisagées | Ajouter une extraction API Kaggle automatique et plus de visualisations sur le dashboard. |
 
 ---
 
-## 9. Conclusion
+## 8. Outils utilisés
 
-Ce premier sprint a permis de :
-- Simuler un pipeline DataOps complet (Extraction → Nettoyage → Chargement → Analyse).
-- Produire un tableau de bord analytique lisible et argumenté.
-- Structurer la documentation Scrum de manière claire et collaborative.
-
-La prochaine itération visera à approfondir les analyses et à automatiser davantage le processus.
-
----
-
-### Fichiers livrables finaux :
-- README.md → Présentation du projet et de l’équipe  
-- documentation_scrum.md → Organisation Scrum complète  
-- dashboard.png ou dashboard.pdf → Résultat visuel final  
-- cleaned_data.csv → Dataset nettoyé (simulation)
+| Type | Outil | Rôle |
+|------|--------|------|
+| Gestion de projet | GitHub Projects | Kanban et backlog du sprint |
+| Documentation | Markdown | README et docs Scrum |
+| Environnement | Python | Simulation du pipeline DataOps |
+| Base de données | PostgreSQL | Stockage des données nettoyées |
+| Visualisation | Streamlit | Tableau de bord analytique |
+| Supervision | Logging (Python) | Suivi des erreurs et des étapes |
 
 ---
 
-Équipe DataPulse :
-- Gloire — Product Owner  
-- Arcy — Scrum Master  
-- Ann-Jireh — Data Engineer (documentation)
+## 9. Objectif final du projet
+
+À la fin du Sprint 1, l’équipe doit être capable de démontrer :
+- La simulation complète d’un **pipeline DataOps** (de l’extraction à la visualisation),  
+- Une **organisation Scrum claire et documentée**,  
+- Un **travail collaboratif efficace** avec répartition équilibrée des tâches.
+
+---
+
+## 10. Conclusion
+
+Le projet **DataTrack** démontre comment les principes Scrum peuvent être appliqués dans un environnement DataOps.  
+Grâce à la coordination entre le Product Owner (Arcy), le Scrum Master (Ann-Jireh) et le Développeur principal (Gloire), l’équipe a pu simuler un sprint Agile complet, livrer des artefacts clairs et assurer un suivi transparent du cycle de développement.
+
+---
+
+**Équipe 2 - DataTrack**  
+Arcy (PO) – Ann-Jireh (SM) – Gloire (Dev DataOps)
+
+_"Inspecter, adapter et livrer de la valeur — même dans la donnée."_
